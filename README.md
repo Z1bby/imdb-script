@@ -3,7 +3,7 @@ Script that gets the top 250 movies from imdb and adds a random one of them to t
 Movies from the database are accessible to user via flask application that runs in localhost:5000
 
 ### Installation:
-To make sure all the required packages are installed, run following command:
+To make sure all the required packages are installed, run the following command:
 ```
 pip install requests beautifulsoup4 pyrebase flask flask-restful flask-sqlalchemy itsdangerous jinja2 markupsafe pytz six werkzeug sqlalchemy==1.3.18 PyJWT==1.7.1 urllib3
 ```
