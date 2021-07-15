@@ -21,9 +21,9 @@ pip install requests beautifulsoup4 pyrebase flask flask-restful flask-sqlalchem
 ### Instructions for use:
 * randomizer.py
   * Make sure the server is running
-  * To add a random movie type: add
-  * To delete specific movie type: delete <id>
-  * In order to exit type: q
+  * To add a random movie type: `add`
+  * To delete specific movie type: `delete <id>`
+  * In order to exit type: `q`
   
 * server.py
   * To view unprotected movies in your web browser go to localhost:5000/unprotected
