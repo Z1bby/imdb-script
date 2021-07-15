@@ -20,13 +20,26 @@ pip install requests beautifulsoup4 pyrebase flask flask-restful flask-sqlalchem
 
 ### Instructions for use:
 * randomizer.py
-  * Make sure the server is running
-  * To add a random movie type: `add`
-  * To delete specific movie type: `delete <id>`
-  * In order to exit type: `q`
+    * Make sure the server is running
+    * To add a random movie type: `add`
+    * To delete specific movie type: `delete <id>`
+    * In order to exit type: `q`
   
 * server.py
-  * To view unprotected movies in your web browser go to localhost:5000/unprotected
-  * In order to view all movies you need to login (user: user, password: pass)
-    * Go to localhost:5000/login
-    * After authorisation go to localhost:5000/protected
+    * To view unprotected movies in your web browser go to localhost:5000/unprotected
+    * In order to view all movies you need to login (user: user, password: pass)
+        * Go to localhost:5000/login
+        * After authorisation go to localhost:5000/protected
+
+### Authentication details
+Firebase database is public and doesn't require any authentication.
+
+Authentication with flask /protected endpoint is established via tokens.
+
+Tokens are generated each time after successful authentication in /login endpoint (user: user, password: pass), and are returned as a json structure `{"token" : <token_utf8>}`.
+
+Token key is stored in session "SECRET_KEY", and algorithm used for encoding is HS256.
+
+Token validation can be checked in https://jwt.io/. To do that, paste the token returned from /login to Encoded section, specify secret key in Decoded section, and make sure algorithm HS256 is selected.
+
+After token is validated all data can be requested from /protected endpoint, where it's parsed to json from python dictionary.
