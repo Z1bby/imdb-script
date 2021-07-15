@@ -15,11 +15,11 @@ pip install requests beautifulsoup4 pyrebase flask flask-restful flask-sqlalchem
     ```
 2.  To add files run in next terminal:
     ```
-    python randomiser.py
+    python randomizer.py
     ```
 
 ### Instructions for use:
-* randomiser.py
+* randomizer.py
   * Make sure the server is running
   * To add a random movie type: add
   * To delete specific movie type: delete <id>
