@@ -13,7 +13,7 @@ pip install requests beautifulsoup4 pyrebase flask flask-restful flask-sqlalchem
     ```
     python server.py
     ```
-2.  To add files run in next terminal:
+2.  To add movies run in next terminal:
     ```
     python randomizer.py
     ```
